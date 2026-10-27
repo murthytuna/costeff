@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "murthytuna-costeff"
+version = "0.1.0"
+description = "把评测的调用成本与分数增益放在一起，算出每提升一分的边际成本"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "murthytuna" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://murthytuna.github.io"
+Repository = "https://github.com/murthytuna/costeff"
+Issues = "https://github.com/murthytuna/costeff/issues"
+
+[project.scripts]
+costeff = "costeff:main"
+
+[tool.setuptools]
+py-modules = ["costeff"]
